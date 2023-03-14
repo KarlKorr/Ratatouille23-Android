@@ -25,7 +25,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".Homepage.homepage"
+        <activity android:name=".View.schermataLogin"
+            android:exported="true" />
+
+        <activity android:name=".View.homepage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +36,10 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
-        <activity android:name=".registraOrdinazioni.RegistraOrdinazioni"
+        <activity android:name=".View.visualizzaAvvisi"
+            android:exported="true">
+        </activity>
+        <activity android:name=".View.RegistraOrdinazioni"
             android:exported="true">
         </activity>
 

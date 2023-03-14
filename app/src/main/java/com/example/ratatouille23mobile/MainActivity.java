@@ -4,15 +4,40 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.os.Handler;
 
-import com.example.ratatouille23mobile.Homepage.homepage;
-import com.example.ratatouille23mobile.Login.schermataLogin;
+import com.example.ratatouille23mobile.View.schermataLogin;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Mostra la schermata di benvenuto per 3 secondi
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Avvia la Homepage dopo 3 secondi
+                Intent intent = new Intent(MainActivity.this, schermataLogin.class);
+                startActivity(intent);
+
+                // Applica un'animazione di transizione
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                // Chiude la MainActivity
+                finish();
+            }
+        }, 2000);
+    }
+
+
+
+
+
+    /*
 
     EditText username;
     EditText password;
@@ -41,5 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+     */
 
 }

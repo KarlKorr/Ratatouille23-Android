@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Homepage.homepage">
+    tools:context=".View.homepage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:background="@drawable/header_background"
         android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,39 +20,44 @@
             android:id="@+id/textHello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="336dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="32dp"
             android:text="Hello"
             android:textColor="@color/white"
             android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.376"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@id/imageView2"
+            app:layout_constraintVertical_bias="0.625" />
 
         <TextView
             android:id="@+id/textUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="304dp"
+            android:layout_marginTop="63dp"
             android:text="@string/carlo"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toEndOf="@+id/textHello"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="240dp"
             android:src="@drawable/custom"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.278"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.313" />
+            app:layout_constraintVertical_bias="0.16" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -60,10 +65,9 @@
         android:id="@+id/labelAvvisi"
         android:layout_width="375dp"
         android:layout_height="129dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/label_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
 
@@ -72,8 +76,8 @@
             android:layout_width="70dp"
             android:layout_height="92dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/visualizzaAvvisiButton"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/bellbell" />
 
@@ -98,10 +102,10 @@
         android:background="@drawable/label_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelAvvisi"
-        app:layout_constraintVertical_bias="0.186">
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/registraOrdinazioneButton"
@@ -120,8 +124,8 @@
             android:layout_width="67dp"
             android:layout_height="79dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/registraOrdinazioneButton"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_menu_white" />
 

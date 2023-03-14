@@ -1,4 +1,4 @@
-package com.example.ratatouille23mobile.Homepage;
+package com.example.ratatouille23mobile.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ratatouille23mobile.R;
-import com.example.ratatouille23mobile.registraOrdinazioni.RegistraOrdinazioni;
 
 public class homepage extends AppCompatActivity {
 
@@ -24,6 +23,14 @@ public class homepage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent openRegistraOrdinazioni = new Intent(homepage.this, RegistraOrdinazioni.class);
                 startActivity(openRegistraOrdinazioni);
+            }
+        });
+
+        visualizzaAvvisiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openVisualizzaAvvisi = new Intent(homepage.this, visualizzaAvvisi.class);
+                startActivity(openVisualizzaAvvisi);
             }
         });
     }
